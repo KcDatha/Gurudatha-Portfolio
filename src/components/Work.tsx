@@ -1,76 +1,66 @@
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(useGSAP);
+const projects = [
+  {
+    name: "TL-SOD",
+    category: "Sod Delivery Platform",
+    tools: "React, Node.js, Azure, Socket.IO, Square API, OpenAI, TensorFlow.js, JWT",
+    image: "/images/tl-sod.png",
+    link: "https://app.tlsodcompany.com",
+  },
+  {
+    name: "Creator Niche",
+    category: "Content Creator Platform",
+    tools: "Next.js, React, Node.js, Express, PostgreSQL, Stripe, WebSockets, Chart.js",
+    image: "/images/creator-niche.png",
+    link: "https://creatorniche.enteraxion.com",
+  },
+  {
+    name: "Opposite",
+    category: "Dating App",
+    tools: "React Native, Node.js, Express, MongoDB, Socket.IO, JWT, Firebase, AWS S3",
+    image: "/images/opposite.png",
+    link: "https://opposites.enteraxion.com",
+  },
+  {
+    name: "RythmaAI",
+    category: "AI Music Platform",
+    tools: "React, Node.js, OpenAI API, Python, TensorFlow, PostgreSQL, WebSockets, AWS",
+    image: "/images/rhythmai.png",
+    link: "https://rhythmai.replit.app/",
+  },
+  {
+    name: "Daedalus Cybernetics",
+    category: "Corporate Web Platform",
+    tools: "React, Next.js, Node.js, TypeScript, Tailwind CSS, AWS, Vercel",
+    image: "/images/daedalus.png",
+    link: "https://daedalus-cybernetics.replit.app",
+  },
+];
 
 const Work = () => {
-  useGSAP(() => {
-  let translateX: number = 0;
-
-  function setTranslateX() {
-    const box = document.getElementsByClassName("work-box");
-    const rectLeft = document
-      .querySelector(".work-container")!
-      .getBoundingClientRect().left;
-    const rect = box[0].getBoundingClientRect();
-    const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
-    let padding: number =
-      parseInt(window.getComputedStyle(box[0]).padding) / 2;
-    translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
-  }
-
-  setTranslateX();
-
-  let timeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".work-section",
-      start: "top top",
-      end: `+=${translateX}`, // Use actual scroll width
-      scrub: true,
-      pin: true,
-      id: "work",
-    },
-  });
-
-  timeline.to(".work-flex", {
-    x: -translateX,
-    ease: "none",
-  });
-
-  // Clean up (optional, good practice)
-  return () => {
-    timeline.kill();
-    ScrollTrigger.getById("work")?.kill();
-  };
-}, []);
   return (
-    <div className="work-section" id="work">
-      <div className="work-container section-container">
-        <h2>
-          My <span>Work</span>
-        </h2>
-        <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
-            <div className="work-box" key={index}>
-              <div className="work-info">
-                <div className="work-title">
-                  <h3>0{index + 1}</h3>
-
-                  <div>
-                    <h4>Project Name</h4>
-                    <p>Category</p>
-                  </div>
-                </div>
-                <h4>Tools and features</h4>
-                <p>Javascript, TypeScript, React, Threejs</p>
+    <div className="work-section section-container" id="work">
+      <h2>
+        My <span>Work</span>
+      </h2>
+      <div className="work-list">
+        {projects.map((project, index) => (
+          <div className="work-item" key={index}>
+            <div className="work-item-left">
+              <span className="work-num">0{index + 1}</span>
+              <div className="work-item-info">
+                <h4>{project.name}</h4>
+                <p className="work-category">{project.category}</p>
+                <p className="work-tools">{project.tools}</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt="" />
             </div>
-          ))}
-        </div>
+            <div className="work-item-image">
+              <WorkImage image={project.image} alt={project.name} link={project.link || undefined} />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

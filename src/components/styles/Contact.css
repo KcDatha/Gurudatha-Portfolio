@@ -3,11 +3,23 @@
   padding-bottom: 100px;
   margin-top: 100px;
 }
+.contact-header {
+  margin-bottom: 60px;
+}
+
 .contact-section h3 {
   font-size: 60px;
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.contact-tagline {
+  font-size: 80px;
+  font-weight: 700;
   margin: 0;
+  color: var(--accentColor);
+  line-height: 1;
 }
 .contact-flex {
   display: flex;
@@ -50,6 +62,9 @@ a.contact-social {
   .contact-section h3 {
     font-size: 50px;
   }
+  .contact-tagline {
+    font-size: 60px;
+  }
   .contact-box h2 {
     font-size: 20px;
   }
@@ -60,6 +75,9 @@ a.contact-social {
 @media only screen and (max-width: 1300px) {
   .contact-section h3 {
     font-size: 40px;
+  }
+  .contact-tagline {
+    font-size: 48px;
   }
   .contact-box h2 {
     font-size: 18px;

@@ -1,0 +1,40 @@
+.techstack {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 80px;
+}
+
+.techstack h2 {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  flex-shrink: 0;
+}
+
+.techstack h2 span {
+  color: var(--accentColor);
+}
+
+.tech-canvas {
+  flex: 1;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media only screen and (max-height: 900px) {
+  .techstack h2 {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .techstack h2 {
+    font-size: 50px;
+  }
+}
