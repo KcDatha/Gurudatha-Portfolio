@@ -29,13 +29,13 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Software Engineer</h4>
-                <h5>PayPal — San Jose, CA</h5>
+                <h5>Adroit Global Solutions, Bengaluru</h5>
               </div>
               <h3>2022–2023</h3>
             </div>
             <p>
               Built high-throughput payment microservices using Java 11, Spring
-              Boot, and Apache Kafka handling 2M+ daily transactions. Improved
+              Boot, and Apache Kafka handling daily transactions. Improved
               API response times 30% through query optimization and achieved 92%
               code coverage across 15+ repositories. Deployed on AWS with
               Terraform IaC and Docker/Kubernetes.
