@@ -29,32 +29,38 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Software Engineer</h4>
-                <h5>Adroit Global Solutions, Bengaluru</h5>
+                <h5>Adroit Global Solutions · Bengaluru, India · Hybrid</h5>
               </div>
               <h3>2022–2023</h3>
             </div>
             <p>
-              Built high-throughput payment microservices using Java 11, Spring
-              Boot, and Apache Kafka handling daily transactions. Improved
-              API response times 30% through query optimization and achieved 92%
-              code coverage across 15+ repositories. Deployed on AWS with
-              Terraform IaC and Docker/Kubernetes.
+              Developed high-throughput payment processing microservices using
+              Java 11, Spring Boot, and Spring Cloud handling millions of daily
+              transactions. Improved API response times by 30% through query
+              optimization and connection pooling. Designed event-driven
+              architectures with Apache Kafka for exactly-once delivery across
+              distributed systems. Deployed on AWS (EC2, ECS, Lambda) with
+              Terraform and Docker/Kubernetes, and drove CI/CD pipelines
+              achieving 90%+ code coverage via Jenkins and GitHub Actions.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Software Engineer</h4>
-                <h5>MyUI.ai (Quick Connect) — Dallas, TX</h5>
+                <h5>MyUI.AI · Clemson, SC · Remote</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Architected 8 Azure Functions microservices behind APIM gateway.
-              Built cross-platform kiosk UI with .NET MAUI and SignalR for
-              real-time communication across 20+ concurrent devices. Reduced p95
-              API latency 35% with Cosmos DB partition optimization and Redis
-              caching.
+              Developing responsive, production-ready UIs for resident services
+              including Meals, Transportation, Service Requests, Activities, and
+              Community Communication. Built kiosk-first interfaces optimized
+              for touch interactions and accessibility. Integrated frontend
+              applications with secure backend APIs for authentication, real-time
+              updates, and transactional workflows. Collaborated with backend and
+              infrastructure teams to align UI behavior with real-time systems
+              and multi-tenant platform requirements.
             </p>
           </div>
         </div>
